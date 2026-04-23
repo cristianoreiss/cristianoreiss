@@ -1,16 +1,11 @@
-## Hi there 👋
+<h1 aligh="center">
+    <a href="https://git.io/typing-svg">
+        <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=&color=2772F7&center=true&vCenter=true&width=435&lines=hi+there!+%F0%9F%91%8B;i'm+cristiano;just+building+things+%E2%9A%99%EF%B8%8F" alt="Typing SVG" />
+    </a>
+</h1>
 
-<!--
-**cristianoreiss/cristianoreiss** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<h5 align="center">
+  <code><a href="hhttps://www.linkedin.com/in/cristianorreis/" title="LinkedIn Profile"><img width="22" src="images/linkedin.svg"> LinkedIn</a></code>
+  <code><a href="https://github.com/cristianoreiss" title="Github Profile"><img width="22" src="images/github.png"> Github</a></code>
+</h5>
+<br>
