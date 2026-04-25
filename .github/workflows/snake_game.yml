@@ -1,0 +1,244 @@
+
+Skip to content
+DEV Community
+Powered by Algolia
+Log in
+Create account
+Cover image for Como adicionar o Snake Game (jogo da cobrinha) no seu perfil do Github 🐍
+Henrique Lopes
+Henrique Lopes
+
+Posted on 4 de jan. de 2022
+Como adicionar o Snake Game (jogo da cobrinha) no seu perfil do Github 🐍
+#github
+
+Primeiramente devo deixar claro que esse artigo foi desenvolvido com base em vários outros artigos e reconstruído para deixar o mais claro possível a forma para inserir o Snake Game em seu perfil.
+Funcionamento. "Contributions in the last year":
+
+Basicamente o Snake game funciona realizando uma coleta da sua tabela de contribuições no Github. ele faz a renderização dessas informações e gera dois arquivos, um em formato gif e outro em svg. São esses arquivos que iremos utilizar para inserir a animação no perfil do Github.
+
+Repositorio do projeto a ser utilizado: Platane/snk
+
+Exemple
+Requisito. "Repositório base":
+
+Para que você possa prosseguir é necessário que você tenha o repositório do perfil (repositório com o mesmo nome de usuário), porém para gerar os arquivos também funciona em outro repositório.
+Actions. "Configuração inicial":
+
+Inicialmente é necessário que você acesse o seu repositório escolhido e vá em Settings.
+
+Configuração inicial
+
+No menu vertical ao lado esquerdo selecione o menu Actions e em seguida ative a permissão “Allow all actions”. Também é possível selecionar diretamente o repositório.
+
+Ative a permissão
+Actions. "Criando Gerador":
+
+Agora que temos o repositório configurado iremos adicionar o "script" para gerar dos arquivos. No repositório, vá em Actions.
+
+Criando o gerador
+
+Em seguida vamos utilizar “Simple workflow” apenas com o mínimo necessário para rodar o codigo.
+
+Configurando
+
+Agora é apenas alterar o nome do arquivo e colar o código da configuração com o seu usuário.
+
+Alterar jnome do arquivo
+
+alterando o username
+
+
+
+# Nome da Actions:  
+name: Snake Game
+
+# Controlador do tempo que sera feito a atualização dos arquivos.
+on:
+  schedule:
+      # Será atualizado a cada 5 horas.
+    - cron: "0 */5 * * *"
+
+# Permite executar na na lista de Actions (utilizado para testes de build).
+  workflow_dispatch:
+
+# Regras
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    # Checks repo under $GITHUB_WORKSHOP, so your job can access it
+      - uses: actions/checkout@v2
+
+    # Repositorio que será utilizado para gerar os arquivos.
+      - uses: Platane/snk@master
+        id: snake-gif
+        with:
+          github_user_name: nomeUsuario #Seu usuario
+          gif_out_path: dist/github-contribution-grid-snake.gif
+          svg_out_path: dist/github-contribution-grid-snake.svg
+
+      - run: git status
+
+      # Para as atualizações.
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+          force: true
+
+      - uses: crazy-max/ghaction-github-pages@v2.1.3
+        with:
+          # the output branch we mentioned above
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+Retornando na opção Actions do repositório, clique em “Run workflow”:
+
+Repositorio
+Pasta dos arquivos:
+
+Em seu repositorio cliente em main e selecione a branch output:
+output
+
+E aqui estão os arquivos gerados que você pode utilizar como bem entender:
+
+Arquivos
+Codigo Github para utilização:
+
+
+![snake gif](https://github.com/SEU_USUARIO/SEU_REPOSITORIO/blob/output/github-contribution-grid-snake.svg)
+profile
+MongoDB
+Promoted
+
+Gen AI apps are built with MongoDB Atlas
+Gen AI apps are built with MongoDB Atlas
+
+MongoDB Atlas is the developer-friendly database for building, scaling, and running gen AI & LLM apps—no separate vector DB needed. Enjoy native vector search, 115+ regions, and flexible document modeling. Build AI faster, all in one place.
+
+Start Free
+Top comments (0)
+Subscribe
+pic
+Code of Conduct • Report abuse
+profile
+The DEV Team
+Promoted
+
+Google article image
+How to prompt Gemini 3.1's new text to speech model
+
+Gemini 3.1 Flash text to speech (TTS) is a new model that you can direct to get the precise audio performance you want. In this blog post I'll share some tips on how to guide the model with prompts, and share some examples of its strengths.
+
+See more 🎥
+Henrique Lopes
+"Não há razão alguma em usar a palavra “impossível” para descrever algo que claramente pode acontecer."
+
+    Joined
+    5 de set. de 2021
+
+Trending on DEV Community
+Chris Jarvis profile image
+What are your goals for the week? #175
+#discuss #motivation
+FrancisTRᴅᴇᴠ (っ◔◡◔)っ profile image
+Unpopular Opinion: Do not use OpenClaw...not yet.
+#devchallenge #openclawchallenge #discuss #ai
+Chocoscoding - Oyeti Timileyin profile image
+Built a 5k usd MRR app with AI but still needed a developer
+#ai #career #discuss #saas
+profile
+AWS
+Promoted
+
+Building industry breakthroughs together
+Building industry breakthroughs together
+
+Discover how the cloud helps businesses adapt, innovate, and grow in real time. Tune in live.
+
+Register Now
+
+
+
+# Nome da Actions:  
+name: Snake Game
+
+# Controlador do tempo que sera feito a atualização dos arquivos.
+on:
+  schedule:
+      # Será atualizado a cada 5 horas.
+    - cron: "0 */5 * * *"
+
+# Permite executar na na lista de Actions (utilizado para testes de build).
+  workflow_dispatch:
+
+# Regras
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+
+    # Checks repo under $GITHUB_WORKSHOP, so your job can access it
+      - uses: actions/checkout@v2
+
+    # Repositorio que será utilizado para gerar os arquivos.
+      - uses: Platane/snk@master
+        id: snake-gif
+        with:
+          github_user_name: cristianoreiss #Seu usuario
+          gif_out_path: dist/github-contribution-grid-snake.gif
+          svg_out_path: dist/github-contribution-grid-snake.svg
+
+      - run: git status
+
+      # Para as atualizações.
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+          force: true
+
+      - uses: crazy-max/ghaction-github-pages@v2.1.3
+        with:
+          # the output branch we mentioned above
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+💎 DEV Diamond Sponsors
+
+Thank you to our Diamond Sponsors for supporting the DEV Community
+Google AI - Official AI Model and Platform Partner
+
+Google AI is the official AI Model and Platform Partner of DEV
+Neon - Official Database Partner
+
+Neon is the official database partner of DEV
+Algolia - Official Search Partner
+
+Algolia is the official search partner of DEV
+
+DEV Community — A space to discuss and keep up software development and manage your software career
+
+    Home
+    About
+    Contact
+    MLH
+
+    Code of Conduct
+    Privacy Policy
+    Terms of Use
+
+Built on Forem — the open source software that powers DEV and other inclusive communities.
+
+Made with love and Ruby on Rails. DEV Community © 2016 - 2026.
+alterando o username
