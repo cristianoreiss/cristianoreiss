@@ -10,12 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ✔️ atualizado
       - uses: actions/checkout@v4
 
-      # gera o snake
-      - uses: Platane/snk@master
-        id: snake-gif
+      - uses: Platane/snk@v3
         with:
           github_user_name: cristianoreiss
           gif_out_path: dist/github-contribution-grid-snake.gif
@@ -23,7 +20,6 @@ jobs:
 
       - run: git status
 
-      # ✔️ push atualizado (mantido, mas ok)
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
@@ -31,8 +27,7 @@ jobs:
           branch: main
           force: true
 
-      # ✔️ versão atual do GitHub Pages action
-      - uses: crazy-max/ghaction-github-pages@v4
+      - uses: crazy-max/ghaction-github-pages@v5
         with:
           target_branch: output
           build_dir: dist
