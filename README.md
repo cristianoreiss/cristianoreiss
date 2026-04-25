@@ -8,16 +8,23 @@
 I work with data across different layers, from building pipelines 🔄 and automating processes ⚙️ to organizing and preparing data for analysis 🧹.
 </p>
 
-<h5 align="center">
-  <code><a href="https://www.linkedin.com/in/cristianorreis/" title="LinkedIn Profile">
-    <img width="22" src="images/linkedin.svg"> LinkedIn
-  </a></code>
-  <code><a href="https://github.com/cristianoreiss" title="Github Profile">
-    <img width="22" src="images/github.png"> GitHub
-  </a></code>
-</h5>
+<div align="center">
 
-<br>
+<div style="display: flex; justify-content: center; gap: 20px;">
+
+  <a href="https://www.linkedin.com/in/cristianorreis/" style="text-decoration: none;">
+    <img width="22" src="images/linkedin.svg" />
+    LinkedIn
+  </a>
+
+  <a href="https://github.com/cristianoreiss" style="text-decoration: none;">
+    <img width="22" src="images/github.png" />
+    GitHub
+  </a>
+
+</div>
+
+</div>
 
 ## My Ninja Way <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2ZoNTFtams1eXFnaWdocHlucnc3MGtxcDRicDkycDZ6eWYzc2M3ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/ylsCFNNmva6yc/giphy.gif" width="46" style="vertical-align: middle; margin-left: 6px;" />
 
